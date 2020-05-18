@@ -27,11 +27,16 @@ SEARCH CONTROLLER
 const controlSearch = async () => {
     // 1. Get query from view
     const query = searchView.getInput();
+    let protein = searchView.getProtein();
 
 
     if (query) {
         // 2. New seach object and add to state
-        state.search = new Search(query);
+        if(!protein){
+            protein = 10;
+        }
+
+        state.search = new Search(query, protein);
 
 
         // 3. Prepare UI for results
@@ -45,6 +50,7 @@ const controlSearch = async () => {
 
             // 5. Render results on UI
             clearLoader();
+            console.log(state.search.result);
             searchView.renderResults(state.search.result)
         } catch (err) {
             alert('Something went wrong with the search');
@@ -80,6 +86,7 @@ const controlRecipe = async () => {
 
     // Get ID from url
     const id = window.location.hash.replace('#', '');
+    console.log(id);
 
     if (id) {
         //Prepare UI for changes
