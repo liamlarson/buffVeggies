@@ -361,7 +361,7 @@ body {
   .recipe__details {
     display: flex;
     align-items: center;
-    padding: 8rem 3rem 3rem 3rem; }
+    padding: 8rem 1rem 3rem 1rem; }
   .recipe__info {
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -388,6 +388,12 @@ body {
     visibility: visible;
     opacity: 1;
     transform: translateY(0); }
+  .recipe__protein{
+     font-size: 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+  }
   .recipe__love {
     background-image: linear-gradient(to right bottom, #f0f0f0, rgb(101, 156, 201));
     border-radius: 50%;

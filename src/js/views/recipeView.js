@@ -72,7 +72,10 @@ export const renderRecipe = (recipe, isLiked) => {
                             </svg>
                         </button>
                     </div>
-
+                </div>
+                <div class = "recipe__protein">
+                    <span class="recipe__info-data recipe__info-data--people">${recipe.protein}</span>
+                    <span class="recipe__info-text"> protein</span>
                 </div>
                 <button class="recipe__love">
                     <svg class="header__likes">
